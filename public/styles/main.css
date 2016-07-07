@@ -534,6 +534,13 @@ color: white;
 /*LOGIN FORM*/
 .login-form{
   color: black;
+  background-image: url("../styles/images/tma-2.png");
+  height: 100vh;
+  width: 100%;
+}
+.nav{
+  background-color: #2B2B2B;
+  color: white;
 }
 .nav > a{
   color: white;
