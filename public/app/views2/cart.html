@@ -1,0 +1,21 @@
+<section class="cart-container">
+  <div class="cart-total">
+    <h2> CART </h2>
+    <div>
+    <ul ng-repeat="user in theUser.cart">
+      <section class="cart-box">
+        <div id="product-title"> {{user.item.title}} </div>
+        <div id="product-description"> {{user.item.description}} </div>
+        <div id="product-price"> {{user.item.price}} </div>
+        </section>
+    </ul>
+  </div>
+    <h1> TOTAL: 225.00 US </h1>
+  </div>
+  <div class="cart-items"></div>
+  <div class="checkout-container">
+    <button> <a ui-sref="home"> CONTINUE SHOPPING </a> </button>
+    <button> <a ui-sref="order"> CHECKOUT NOW </a> </button>
+
+  </div>
+</section>

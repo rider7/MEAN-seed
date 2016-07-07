@@ -1,20 +1,90 @@
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title> AIAIAI Headphones </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body ng-controller="mainCtrl">
+    <section class="main-container">
+        <section class="left-main-container">
+            <section class="route-container">
+                <ui-view></ui-view>
+            </section>
+            <footer class="footer">
+                <div id="links">
+                    <div id="links-left">
+                        <ul>
+                            <li> Headphones </li>
+                            <li> Parts </li>
+                            <li> Accessories </li>
+                            <li> Gift card </li>
+                            <li> Support </li>
+                            <li> About </li>
+                        </ul>
+                    </div>
+                    <div id="links-right">
+                        <ul>
+                            <li> General enquiry </li>
+                            <li> Webshop enquiry </li>
+                            <li> Product issue </li>
+                            <li> TMA Compatibility </li>
+                            <li> TMA-1 Replacement </li>
+                            <li> Headband </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="newsletter">
+                    <h1> Newsletter </h1>
+                    <h1> Newsletter Join Button </h1>
+                </div>
+                <div id="social">
+                    </p>Or find us on</p>
+                </div>
+            </footer>
+        </section>
 
-  </head>
-  <body>
+        <section class="nav-bar">
+            <nav-dir> </nav-dir>
+            <!-- <h1> Hello {{user.name}} </h1> -->
+            <div class="cart"> <a ui-sref='cart'> CART </a> </div>
+            <ul id="nav-list">
+                <li> <a ui-sref='home'> HOME </a> </li>
+                <li> <a ui-sref='home'> HEADPHONES </a> </li>
+                <li> <a ui-sref='home'> CONFIGURATOR </a> </li>
+                <li> <a ui-sref='home'> ARTISTS </a> </li>
+                <li> <a ui-sref='home'> BLOG </a> </li>
+                <li> <a ui-sref='home'> REVIEWS </a> </li>
+            </ul>
+        </section>
 
-    <ui-view ></ui-view>
-
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="./bundle.js"></script>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="./app/app.js"></script>
+    <script src='./app/routes/home/homeCtrl.js'></script>
+    <script src='./app/directives/nav/navCtrl.js'></script>
+    <script src='./app/directives/nav/navDir.js'></script>
+    <script src='./app/routes/login/loginCtrl.js'></script>
+    <script src='./app/routes/profile/profileCtrl.js'></script>
+    <script src='./app/services/authService.js'></script>
+    <script src='./app/services/userService.js'></script>
+    <script src="./app/controllers2/mainCtrl.js"></script>
+    <script src="./app/services2/productSvc.js"></script>
+    <script src="./app/services2/cartSvc.js"></script>
+    <script src="./app/services2/userSvc.js"></script>
+    <script src="./app/services2/orderSvc.js"></script>
+    <script src="./app/controllers2/controller.js"></script>
+    <script src="./app/controllers2/userCtrl.js"></script>
+    <script src="./app/controllers2/productCtrl.js"></script>
+    <script src="./app/controllers2/navCtrl.js"></script>
+
+
+</body>
+
 </html>
