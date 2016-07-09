@@ -17,7 +17,7 @@ angular.module('app')
 		}
 
 		this.updateCart = function( cart ) {
-			return $http.put('/api/cart/' + cartId, cart)
+			return $http.put('/api/cart/', cart)
 		}
 
 	})

@@ -127,6 +127,7 @@ module.exports = {
     },
 
     updateCartID: function(req, res, next) {
+      console.log(req.user)
         User.findById(req.user._id, function(error, response) {
             if (error) {
                 res.status(500).send(error)
