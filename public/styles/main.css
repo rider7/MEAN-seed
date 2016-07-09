@@ -377,7 +377,7 @@ a:hover {
 /*MAIN TMA-2*/
 
 .tma-2-image-container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     order: 2;
     display: flex;
@@ -396,6 +396,16 @@ a:hover {
     width: 35%;
     background-color: #A9A9A9;
     color: white;
+    margin-right: 50px;
+}
+
+#tma-2-stats > p{
+  border-top: solid white .5px;
+}
+
+.tma-2-images > img{
+  height: 30px;
+  width: 30px;
 }
 .parts {
     width: 100%;
@@ -658,4 +668,29 @@ img {
 
 .cart-total {
   height: 90%;
+}
+#checkoutbutton {
+  width: 80px;
+  height: 25px;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+#checkoutbutton2 {
+  width: 120px;
+  height: 25px;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.buttons-class{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

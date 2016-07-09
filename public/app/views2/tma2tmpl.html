@@ -24,15 +24,25 @@
    <div class="tma-2-text">
      <h1 style="font-size: 2em"> TMA - 2 </h1>
      <h2 style="color: black"> S 03 - H 03 -E 0 5 - C 0 2 </h2>
-     <p> This configuration has a very detailed and articulated bass. Mids are sligthly forward adn good for vocals. Rounded highs. Wide sound stae and medium isolation. </p>
-     <span style="display: inline-block"> <h2> 2 2 5 </h2> <h1> U S D </h1> </span>
-    <button ng-click="buyProduct(product._id)"> <a ui-sref='cart'> Buy </a> </button>
-     <button> RECONFIGURE </button>
-   <br/>
+     <p> This configuration has a very detailed and articulated bass. Mids are sligthly forward and good for vocals. Rounded highs. Wide sound state and medium isolation. </p>
+     <div style="display: flex; flex-direction: row"> <h2> 225 </h2> <h2 style="padding-left: 20px"> USD </h2> </div>
+    <!-- <button ng-click="buyProduct(product._id)"> <a ui-sref='cart'> Buy </a> </button> -->
+     <!-- <button> RECONFIGURE </button> -->
+     <div class="buttons-class">
+     <div id="checkoutbutton" ng-click="buyProduct(product._id)">
+<p style="margin: auto"><a ui-sref='cart'> BUY </a></p>
+</div>
+<div id="checkoutbutton2">
+<p style="margin: auto"><a href="#/"> RECONFIGURE </a></p>
+</div>
+</div>
+
+   <div id="tma-2-stats">
    <p> 10 USD SHIPPING FROM US </p>
    <p> 30 DAYS RETURN POLICY </p>
    <p> 3 YEARS WARRANTY </p>
-   <p> SOCIAL ICONS </p>
+   <div class="tma-2-images"><img src="./styles/images/facebook.png"> <img src="./styles/images/twitter.png"></div>
+ </div>
  </div>
  </section>
  <section class="parts">
@@ -45,7 +55,10 @@
        <h1> S 0 3 </h1>
        <h2> SPEAKER UNITS </h2>
        <p> Engineered with a titanium coated driver to reduce distortion, and designed with a fully sealed driver, providing a full and rich sound. </p>
-       <button> INFO </button>
+       <div id="checkoutbutton2">
+       <p style="margin: auto"><a href="#/"> INFO </a></p>
+       </div>
+       </div>
      </div>
    </section>
    <section class="headband-units">
@@ -53,7 +66,9 @@
        <h1> H 0 3 </h1>
        <h2> HEADBAND </h2>
        <p> New reinforced nylon headband with high comfort and durable PU leather head padding. </p>
-       <button> INFO </button>
+       <div id="checkoutbutton2">
+       <p style="margin: auto"><a href="#/"> INFO </a></p>
+       </div>
      </div>
      <div class="headband-image"> <img src="./styles/images/headband1.jpg"> </div>
   </section>
@@ -65,7 +80,9 @@
        <h1> E 0 5 </h1>
        <h2> EARPADS </h2>
        <p> Vibrant sound representation. Wide soundstage. Excellent comfort. </p>
-       <button> INFO </button>
+       <div id="checkoutbutton2">
+       <p style="margin: auto"><a href="#/"> INFO </a></p>
+       </div>
      </div>
    </section>
    <section class="cable-units">
@@ -73,7 +90,9 @@
        <h1> C 0 2 </h1>
        <h2> CABLE </h2>
        <p> Coiled 1.5 meter Thermo plastic cable, soft touch surface and can extend to 3.2m, perfect for Djing or small studio usage - comes with 1/4 to 1/8 screw on adaptor. </p>
-       <button> INFO </button>
+       <div id="checkoutbutton2">
+       <p style="margin: auto"><a href="#/"> INFO </a></p>
+       </div>
      </div>
      <div class="cable-image"> <img src="./styles/images/cables1.jpg"> </div>
   </section>
