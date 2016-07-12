@@ -1,10 +1,13 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+var Cart = require('./../models/cart.js')
 
 var User = new mongoose.Schema({
   name: { type: String },
   email: { type: String, index: true, trim: true },
-  password: { type: String }
+  password: { type: String },
+  cart: [Cart],
+  orders: []
 });
 
 User.pre('save', function(next) {

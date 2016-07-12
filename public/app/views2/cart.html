@@ -1,21 +1,29 @@
 <section class="cart-container">
   <div class="cart-total">
-    <h2> CART </h2>
-    <div>
-    <!-- <ul ng-repeat="user in theUser.cart">
-      <section class="cart-box">
-        <div id="product-title"> {{user.item.title}} </div>
-        <div id="product-description"> {{user.item.description}} </div>
-        <div id="product-price"> {{user.item.price}} </div>
-        </section>
-    </ul> -->
+    <h2 id="total-price"> CART </h2>
+      <div class="cart-box-container">
+      <div ng-repeat="cart in theUser.cart" style="color:white">
+        <div id="center-cart-text">
+        <div id="cart-image"><img src="./styles/images/popular1.png"></div>
+        <div id="cart-title"> PRODUCT - {{cart.item.title}} {{cart.item.description}} </div>
+        <div id="cart-quantity"> QTY - {{cart.quantity}} </div>
+        <div id="cart-price"> PRICE - {{cart.item.price}} USD </div>
+      </div>
+      </div>
+    </div>
+
+
+
+      <h1 id="total-price"> TOTAL: 225.00 US </h1>
+      <span>{{getTotal()}}</span>
   </div>
-    <h1> TOTAL: 225.00 US </h1>
-  </div>
-  <div class="cart-items"></div>
   <div class="checkout-container">
-    <button> <a ui-sref="home"> CONTINUE SHOPPING </a> </button>
-    <button> <a ui-sref="order"> CHECKOUT NOW </a> </button>
+    <div id="checkoutbutton3">
+    <p style="margin: auto"><a href="#/"> CONTINUE SHOPPING </a></p>
+    </div>
+    <div id="checkoutbutton4">
+    <p style="margin: auto"><a ui-sref="order"> CHECKOUT NOW </a></p>
+    </div>
 
   </div>
 </section>

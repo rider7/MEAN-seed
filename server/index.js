@@ -75,8 +75,8 @@ app.post('/api/order/:user_id', serverCtrl.createOrderID);
 app.get('/api/order/', serverCtrl.getOrder);
 
 //CART
-app.post('/api/cart/', serverCtrl.createCartID);
-app.put('/api/cart/', serverCtrl.updateCartID);
+app.post('/api/cart/:user_id', serverCtrl.createCartID);
+app.put('/api/cart/:user_id', serverCtrl.updateCartID);
 
 // CONNECTIONS //
 var mongoURI = config.MONGO_URI;

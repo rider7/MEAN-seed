@@ -2,7 +2,7 @@ angular.module('app')
 	.service('productSvc', function( $http ) {
 
 		this.getProducts = function() {
-			return $http.get('/api/products')
+			return $http.get('/api/products/')
 					.then(function(response) {
 						return response.data;
 					})

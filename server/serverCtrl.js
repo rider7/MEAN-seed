@@ -112,55 +112,49 @@ module.exports = {
         });
     },
 
-    createCartID: function(req, res, next) {
-        User.findByIdAndUpdate(req.user._id, {
-            $push: {
-                cart: req.body
-            }
-        }, function(error, response) {
-            if (error) {
-                return res.status(500).json(error)
-            } else {
-                return res.json(response)
-            }
-        });
-    },
+    createCartID: function(req, res, next){
+      User.findByIdAndUpdate(req.params.user_id, {$push: {cart: req.body}}, function(error, response){
+         if(error) {
+           return res.status(500).json(error)
+         } else {
+           return res.json(response)
+         }
+       });
+     },
 
-    updateCartID: function(req, res, next) {
-      console.log(req.user)
-        User.findById(req.user._id, function(error, response) {
-            if (error) {
-                res.status(500).send(error)
-            }
-            var myUser = response;
-            var qty = req.body.quantity / 1;
-            var foundItem = -1;
-            myUser.cart.forEach(function(cartItem, index) {
-                if (cartItem.item.toString() === req.body.item) {
-                    foundItem = index
-                }
-            })
-            if (foundItem >= 0) {
-                console.log("Found Item = " + foundItem)
-                if (qty === 0) {
-                    myUser.cart.splice(foundItem, 1);
-                } else {
-                    myUser.cart[foundItem].quantity = qty
-                }
-            } else {
-                myUser.cart.push(req.body.item)
-            }
-            saveUser(myUser, req, res);
-        })
 
-        function saveUser(userToSave, req, res) {
-            userToSave.save(function(err, result) {
-                if (err) {
-                    res.status(500).send(err)
-                } else {
-                    res.send(result)
-                }
-            })
-        };
+    updateCartID: function(req, res, next){
+      console.log(req.params)
+      User.findByIdAndUpdate(req.params.user_id, {$push: {cart: req.body}}, function(error, response) {
+  if (error) {
+    res.status(500).send(error)
+  }
+  var myUser = response;
+  var qty = req.body.quantity / 1;
+  var foundItem = -1;
+  myUser.cart.forEach(function(cartItem, index) {
+    if (cartItem.item.toString() === req.body.item) {
+      foundItem = index
     }
+  })
+  if (foundItem >= 0) {
+     console.log("Found Item = " + foundItem)
+    if (qty === 0) {
+      myUser.cart.splice(foundItem, 1);
+    } else {
+      myUser.cart[foundItem].quantity = qty
+    }
+  }
+  saveUser(myUser, req, res);
+})
+function saveUser(userToSave, req, res) {
+  userToSave.save(function(err, result) {
+    if (err) {
+      res.status(500).send(err)
+    } else {
+      res.send(result)
+    }
+  })
+};
+}
 }

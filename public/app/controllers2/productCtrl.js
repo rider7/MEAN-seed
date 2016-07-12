@@ -1,5 +1,5 @@
 angular.module('app')
-.controller('productCtrl', function($scope, productSvc, cartSvc){
+.controller('productCtrl', function($scope, productSvc, cartSvc, userSvc){
 //these functions should all be in services to do the heavy lifting
 
 productSvc.getProducts().then(function(data){
@@ -13,4 +13,7 @@ $scope.buyProduct = function(product) {
   })
  }
 
+ userSvc.getUser().then(function(data){
+    $scope.theUser = data;
+  })
 });

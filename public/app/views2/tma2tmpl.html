@@ -1,36 +1,34 @@
 <section class="tma-2-main-container">
- <section class="fixed-header">
-  <div class="first-row">
+ <section class="fixed-header" >
+  <div class="first-row" style="color:grey">
     <ul>
-      <li> TMA-2 </li>
-      <li> TRACKS </li>
-      <li> PIPE </li>
-      <li> CAPITAL </li>
-      <li> GIFT CARD </li>
+      <li> <a href="#/"> TMA-2 </a> </li>
+      <li> <a href="#/"> TRACKS </a> </li>
+      <li> <a href="#/"> PIPE </a> </li>
+      <li> <a href="#/"> CAPITAL </a> </li>
+      <li> <a href="#/"> GIFT CARD </a> </li>
     </ul>
   </div>
-  <div class="second-row">
+  <div class="second-row" style="color:grey">
     <ul>
-      <li> PRESETS/EDITIONS </li>
-      <li> PARTS </li>
-      <li> GUIDE </li>
-      <li> CONFIGURATOR </li>
-      <li> ABOUT </li>
+      <li> <a href="#/"> PRESETS/EDITIONS </a> </li>
+      <li> <a href="#/"> PARTS </a></li>
+      <li> <a href="#/"> GUIDE </a></li>
+      <li> <a href="#/"> CONFIGURATOR </a></li>
+      <li> <a href="#/"> ABOUT </a></li>
     </ul>
   </div>
  </section>
  <section class="tma-2-image-container">
    <div class="tma-2-image"> <img src="./styles/images/tma-2.png"> </div>
    <div class="tma-2-text">
-     <h1 style="font-size: 2em"> TMA - 2 </h1>
-     <h2 style="color: black"> S 03 - H 03 -E 0 5 - C 0 2 </h2>
+     <h1 style="font-size: 2em; margin: 5vh;"> TMA - 2 </h1>
+     <h2 style="color: black"> S03 - H03 - E05 </h2>
      <p> This configuration has a very detailed and articulated bass. Mids are sligthly forward and good for vocals. Rounded highs. Wide sound state and medium isolation. </p>
      <div style="display: flex; flex-direction: row"> <h2> 225 </h2> <h2 style="padding-left: 20px"> USD </h2> </div>
-    <!-- <button ng-click="buyProduct(product._id)"> <a ui-sref='cart'> Buy </a> </button> -->
-     <!-- <button> RECONFIGURE </button> -->
      <div class="buttons-class">
-     <div id="checkoutbutton" ng-click="buyProduct(product._id)">
-<p style="margin: auto"><a ui-sref='cart'> BUY </a></p>
+     <div id="checkoutbutton" ng-click="buyProduct('57844456b401d4080870409b')">
+<p style="margin: auto"><a ui-sref='cart'> BUY {{product.title}}</a></p>
 </div>
 <div id="checkoutbutton2">
 <p style="margin: auto"><a href="#/"> RECONFIGURE </a></p>

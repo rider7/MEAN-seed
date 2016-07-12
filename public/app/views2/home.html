@@ -10,13 +10,14 @@
     <h2> N E W   C A B L E S </h2>
   </section>
   <section class="cable-container">
-    <div id="blue-cable"><img src="./styles/images/bluecable.png"></div>
-    <div id="yellow-cable"><img src="./styles/images/yellowcable.png"></div>
+    <div id="blue-cable" ng-class="{blue1: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"><a ui-sref='tma-2'><img src="./styles/images/bluecable.png"></a></div>
+    <div id="yellow-cable" project-dir><img src="./styles/images/yellowcable.png"></div>
     <div id="red-cable"><img src="./styles/images/redcable.png"></div>
   </section>
   <section class="headband-container">
     <div id="headband-vid">
-      <div class="vimeoFrame"> <iframe class="vimeoXtra" src="https://player.vimeo.com/video/125035211" width="100%" height="100%" frameborder="0"></iframe></div>
+      <div class="vimeoFrame"> <iframe class="vimeoXtra" src="https://player.vimeo.com/video/125035211?autoplay=1&loop=1&automute=0" width="100%" height="100%" frameborder="0"></iframe></div>
+      </div>
   </div>
     <div id="headband-title">
       <h2 id="newheadband"> NEW HEADBAND </h2>
@@ -29,10 +30,11 @@
     <h2> LATEST BLOG POST </h2>
   </section>
   <section class="blog">
-    <div id="blog-image"> <img src="./styles/images/blog.jpg"> </div>
+    <div id="blog-image">
+       <img src="./styles/images/blog.jpg"> </div>
     <div id="blog-test">
       <h2> AIAIAI X NEXTBIT </h2>
-      <h2> READ NOW >> </h2>
+      <h2 id="read-now" style="color: #1536ff"> READ NOW >> </h2>
   </section>
   </section>
   <section class="popular-container">
@@ -40,9 +42,9 @@
     <h2> MOST  POPULAR </h2>
   </section>
   <section class="pop-items-container">
-    <div id="headset-image1"> <a ui-sref='tma-2'><img src="./styles/images/popular1.png"> </a> </div>
-    <div id="headset-image2"> <a ui-sref='tma-2'><img src="./styles/images/popular2.png"> </a> </div>
-    <div id="headset-image3"> <a ui-sref='tma-2'><img src="./styles/images/popular3.png"> </a> </div>
+    <div id="headset-image1" ng-class="{blue1: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"> <a ui-sref='tma-2'><img src="./styles/images/popular1.png"> </a> </div>
+    <div id="headset-image2" project-dir> <a ui-sref='tma-2'><img src="./styles/images/popular2.png"> </a> </div>
+    <div id="headset-image3" project-dir> <a ui-sref='tma-2'><img src="./styles/images/popular3.png"> </a> </div>
   </section>
 </section>
 </section>
